@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+  socket.emit('location', { bar: 'foo'});
+
+  var emitLocation = function ( location ) {
+    socket.emit('location',location);
+  }
+</script>
+
+</body>
+</html>
